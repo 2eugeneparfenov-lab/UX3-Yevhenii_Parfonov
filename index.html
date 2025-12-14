@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BrainForge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="design/indexD.css" rel="stylesheet" type="text/css">
+</head>
+<body style="background-image: url('/design/nik-iurev-7h82oLj3GA0-unsplash.jpg'); background-repeat: no-repeat; background-size: cover;">
+<section class="img_section">
+    <!-- Верхній прямокутник -->
+    <div class="rectangle">
+        <div class="upper_text">
+            <a href="#">Profile</a>
+            <a href="#">Practice Tasks</a>
+            <a href="#">Focus Tasks</a>
+            <a href="#">AI assistant</a>
+        </div>
+        <div class="upper_text_left">
+            <a href="#">Contact us</a>
+            <a href="#" id="openModal">Log in</a>
+        </div>
+    </div>
+
+    <!-- Головний текст -->
+    <h1 class="main_text">BrainForge - train your intellect</h1>
+
+
+    <!-- Модальне вікно -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h1>WELCOME</h1>
+                <h2>BrainForge</h2>
+                <p>An interactive platform for pupils and students that helps them learn programming in a simple and fun way through practice, tests, and visual tasks.</p>
+            </div>
+            <div class="modal-right">
+                <span class="close" id="closeModal">&times;</span>
+                <h1>Sign in</h1>
+                <label>Username</label>
+                <input type="text" placeholder="User name">
+                <label>Password</label>
+                <input type="password" placeholder="Password">
+                <div class="forgot-password">
+                    <a href="#" style="margin-left: 150px;">Forgot password?</a>
+                </div>
+                <button class="login-btn" onclick="goMainMenu()" >Sign in</button>
+                <button class="create-btn" id="openRegister">Create an account</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h1>WELCOME</h1>
+                <h2>BrainForge</h2>
+                <p>An interactive platform for pupils and students that helps them learn programming in a simple and fun way through practice, tests, and visual tasks.</p>
+            </div>
+            <div class="modal-right">
+                <span class="close" id="backToManuBtn">&times;</span>
+                <h1>Create an account</h1>
+                <label>Username</label>
+                <input type="text" placeholder="User name">
+                <label>Email</label>
+                <input type="email" placeholder="Email">
+                <label>Password</label>
+                <input type="password" placeholder="Password">
+                <label>Confirm password</label>
+                <input type="password" placeholder="Password">
+                <button class="login-btn" id="continue_btn">Continue</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h1>WELCOME</h1>
+                <h2>BrainForge</h2>
+                <p>An interactive platform for pupils and students that helps them learn programming in a simple and fun way through practice, tests, and visual tasks.</p>
+            </div>
+            <div class="modal-right">
+                <span class="close" id="closeConfirmMailMenu">&times;</span>
+                <h1>Create an account</h1>
+                <label>Confirm code</label>
+                <input type="email" placeholder="Code">
+                <button class="login-btn" onclick="goMainMenu()">Create an account</button>
+                <button class="create-btn">Send new code</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="info_about_wrapper">
+        <button class="info_about" onclick="window.location.href='#about_us'">Learn more</button>
+    </div>
+
+</section>
+<section class="about_us" id="about_us">
+    <div class="about_container">
+
+        <!-- Ліва частина -->
+        <div class="about_left">
+            <h1>BrainForge</h1>
+
+            <div class="about_text_columns">
+                <p>
+                    Text Text Text Text Text Text Text<br>
+                    Text Text Text Text Text Text Text<br>
+                    Text Text Text Text Text Text Text<br>
+                    Text Text Text Text Text Text Text<br>
+                    Text Text Text Text Text Text Text<br>
+                    Text Text Text Text Text Text Text<br>
+                </p>
+
+                <p>
+                    Text Text Text Text Text Text Text<br>
+                    Text Text Text Text Text Text Text<br>
+                    Text Text Text Text Text Text Text<br>
+                    Text Text Text Text Text Text Text<br>
+                    Text Text Text Text Text Text Text<br>
+                    Text Text Text Text Text Text Text<br>
+                </p>
+            </div>
+        </div>
+
+        <!-- Права частина -->
+        <div class="about_right">
+            <div class="user_story">
+                <div class="user_box">User</div>
+                <span>User story about platform</span>
+            </div>
+
+            <div class="user_story">
+                <div class="user_box">User</div>
+                <span>User story about platform</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="contact_info">
+                <h3>Contact us</h3>
+
+                <div class="contact_row">
+                    <span>Phone</span>
+                    <span>+421123456789</span>
+                </div>
+
+                <div class="contact_row">
+                    <span>Email</span>
+                    <span>for_example@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
