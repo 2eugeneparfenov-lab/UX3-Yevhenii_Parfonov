@@ -1,0 +1,149 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    background-color: rgb(30, 30, 30);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+
+/* Верхній прямокутник */
+/* Зберігаємо rectangle fixed */
+.rectangle {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, #3e3a3a, #2f2b2b);
+    position: fixed;
+    top: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99;
+}
+
+/* Додаємо відступ для основного контенту */
+.img_section, .about_us, .main_text {
+    padding-top: 40px; /* рівно висоті rectangle */
+}
+
+
+/* Блоки навігації */
+.upper_text, .upper_text_left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Лівий блок меню */
+.upper_text {
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+/* Правий блок меню */
+.upper_text_left {
+    justify-content: flex-end;
+    padding-right: 40px;
+    margin-top: -25px;
+}
+
+/* СТИЛІ ДЛЯ ВСІХ ПОСИЛАНЬ МЕНЮ */
+.upper_text a,
+.upper_text_left a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Ховер-ефект підняття та світіння */
+.upper_text a:hover,
+.upper_text_left a:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 2px 5px rgba(0, 170, 255, 0.5);
+}
+
+/* Анімоване підкреслення */
+.upper_text a::after,
+.upper_text_left a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #00aaff;
+    transition: width 0.3s ease;
+}
+
+/* Плавне розширення підкреслення */
+.upper_text a:hover::after,
+.upper_text_left a:hover::after {
+    width: 100%;
+}
+
+.main_text {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 80px;
+    color: #ffffff;
+}
+
+.menu_rect {
+    width: 200px;
+    height: 400px;
+    background-color: #d9d9d9;
+    color: #2f2b2b;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: 4px #3e3a3a solid;
+
+    display: flex;              /* додаємо flex */
+    flex-direction: column;     /* елементи по вертикалі */
+    justify-content: center;    /* вертикальне вирівнювання */
+    align-items: center;        /* горизонтальне вирівнювання */
+    text-align: center;         /* вирівнювання тексту */
+    gap: 20px;                  /* відстань між заголовком та іконкою */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+
+.menu_rect:hover {
+    transform: translateY(-10px);
+
+    /*border-color: #00aaff;*/
+    /*color: #00aaff;*/
+
+    /*box-shadow: 0 4px 12px rgba(0, 170, 255, 0.25);*/
+}
+
+.menu_icon {
+    width: 100px;      /* розмір іконки */
+    height: 100px;
+    object-fit: contain;
+    transition: 0.2s ease;
+}
+
+.menu_icon_wrapper {
+    display: flex;
+    justify-content: center; /* горизонтальне вирівнювання */
+    align-items: center;     /* вертикальне вирівнювання */
+    width: 100px;            /* розмір контейнера */
+    height: 100px;
+}

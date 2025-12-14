@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>BrainForge</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="design/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body style="background-image: url('/design/nik-iurev-7h82oLj3GA0-unsplash.jpg'); background-repeat: no-repeat; background-size: cover;">
+<body>
 <section class="img_section">
     <!-- Верхній прямокутник -->
     <div class="rectangle">
@@ -17,15 +17,13 @@
             <a href="#">AI assistant</a>
         </div>
         <div class="upper_text_left">
-            <a href="#">Contact us</a>
+            <a href="#" id="openModal4">Join our team</a>
             <a href="#" id="openModal">Log in</a>
         </div>
     </div>
 
     <!-- Головний текст -->
     <h1 class="main_text">BrainForge - train your intellect</h1>
-
-
     <!-- Модальне вікно -->
     <div class="modal" id="modal">
         <div class="modal-content">
@@ -89,6 +87,30 @@
         </div>
     </div>
 
+    <div class="modal" id="modal4">
+        <div class="modal-content4">
+            <div class="modal4-left">
+                <h1>Join Our Team</h1>
+                <h3>
+                    Send us your resume and become part of our development team.
+                    We are always looking for motivated developers who are eager to learn,
+                    grow professionally, and work on real projects.
+                </h3>
+            </div>
+
+            <div class="modal4-right">
+                <a href="mailto:brainforge.team@gmail.com
+  ?subject=Job Application
+  &body=Hello BrainForge Team,%0D%0A%0D%0AI would like to apply for a developer position.%0D%0APlease find my resume attached."
+                        class="apply-btn">
+                    Apply Now
+                </a>
+                <span class="close4" id="closeModal4">&times;</span>
+            </div>
+        </div>
+    </div>
+
+
     <div class="info_about_wrapper">
         <button class="info_about" onclick="window.location.href='#about_us'">Learn more</button>
     </div>
@@ -148,6 +170,10 @@
                     <span>Email</span>
                     <span>for_example@gmail.com</span>
                 </div>
+                <div class="contact_row">
+                    <span>Address</span>
+                    <span>Address: 123 Main Street, City</span>
+                </div>
             </div>
         </div>
 
@@ -157,6 +183,6 @@
 
 
 
-<script src="index.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

@@ -7,12 +7,12 @@ html, body {
     background-position: center;
     background-size: cover;
     scroll-behavior: smooth;
-    background-image: url('/design/nik-iurev-7h82oLj3GA0-unsplash.jpg'); background-repeat: no-repeat; background-size: cover;
+    background-image: url('/images/img.jpg');
 }
 
 .img_section{
     height: 100vh;
-    background-image: url('/design/nik-iurev-7h82oLj3GA0-unsplash.jpg');
+    background-image: url('/images/img.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -291,72 +291,6 @@ html, body {
     color: #234f9b;
 }
 
-.button {
-    all: unset;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5em 2em;
-    border: 3px solid #239BA7;
-    border-radius: 0.5em;
-    color: #239BA7;
-    font-size: 1.2em;
-    font-weight: 600;
-    cursor: pointer;
-    overflow: hidden;
-    transition: color 0.3s, transform 0.2s, border-color 0.3s;
-}
-
-.button p {
-    position: relative;
-    z-index: 10;      /* текст завжди зверху */
-    margin: 0;
-    transition: color 0.3s;
-}
-
-.button .circle {
-    position: absolute;
-    width: 7em;
-    aspect-ratio: 1;
-    background: #239BA7;
-    opacity: 0.3;
-    border-radius: 50%;
-    transition: transform 0.5s, background 0.3s;
-    z-index: 1;       /* позаду тексту */
-}
-
-.button .circle.left {
-    left: 0;
-    transform: translateX(-6em);
-}
-
-.button .circle.right {
-    right: 0;
-    transform: translateX(6em);
-}
-
-.button:hover {
-    color: #ffffff;  /* текст стає білим */
-    transform: translateY(-2px);
-}
-
-.button:hover .circle.left {
-    transform: translateX(-1em);
-}
-
-.button:hover .circle.right {
-    transform: translateX(1em);
-}
-
-.button:active {
-    border-color: #17696B;
-}
-
-.button:active .circle.left,
-.button:active .circle.right {
-    background: #17696B; /* темніший колір при натисканні */
-}
 .modal {
     display: none;
     position: fixed;
@@ -393,6 +327,99 @@ html, body {
     align-items: center;
     padding: 40px;
 }
+
+.modal-content4 {
+    display: flex;
+    width: 680px;
+    height: 420px;
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    animation: popup 0.35s ease-out;
+}
+
+/* LEFT SIDE */
+.modal4-left {
+    flex: 1.2;
+    background: #234f9b;
+    color: #ffffff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal4-left h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.modal4-left h3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* RIGHT SIDE */
+.modal4-right {
+    flex: 0.8;
+    background: #f5f7fb;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BUTTON */
+.apply-btn {
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: #234f9b;
+    color: #ffffff;
+    transition: 0.25s ease;
+}
+
+.apply-btn:hover {
+    background: #1b3f7c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(35,79,155,0.35);
+}
+
+/* CLOSE */
+.close4 {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #777;
+    transition: 0.2s;
+}
+
+.close4:hover {
+    color: #000;
+}
+
+/* ANIMATION */
+@keyframes popup {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
 .modal-left h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -488,6 +515,19 @@ html, body {
 }
 .close:hover {
     color: #0a1a2f;
+}
+
+.close4 {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #2f2b2b;
+    transition: 0.3s;
+}
+.close4:hover {
+    color: #2f2b2b;
 }
 @keyframes popup {
     from { transform: scale(0.9); opacity: 0; }

@@ -53,11 +53,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === registerModal3) registerModal3.classList.remove('show');
     });
 
+    const Modal4 = document.getElementById('modal4');
+    const openModal4 = document.getElementById('openModal4');
+    const closeModal4 = document.getElementById('closeModal4');
+
+    openModal4.addEventListener('click', () => {
+        Modal4.classList.add('show');
+    });
+
+    closeModal4.addEventListener('click', () => {
+        Modal4.classList.remove('show');
+    });
+
+    Modal4.addEventListener('click', e => {
+        if (e.target === Modal4) Modal4.classList.remove('show');
+    });
 
 });
 
 function goMainMenu() {
-    window.location.href = 'main_menu.html';
+    window.location.href = 'pages/menu_page.html';
 }
 
 
