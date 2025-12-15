@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <title>Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="../css/profile.css" rel="stylesheet" type="text/css">
-
+    <link href="/css/profile.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <section class="img_section">
     <div class="rectangle">
         <div class="upper_text">
             <a href="menu_page.html">Menu</a>
-            <a href="profile.html">Profile</a>
+            <a href="profile.html" style="color: #00aaff">Profile</a>
             <a href="practice.html">Practice Tasks</a>
             <a href="focus.html">Focus Tasks</a>
             <a href="chat_bot.html">AI assistant</a>
@@ -22,14 +21,148 @@
             <a href="../index.html">Log out</a>
         </div>
     </div>
-    <div class="wrapper">
-        <div class="photo_rect"></div>
-    </div>
-    <div class="wrapper">
-        <div class="info_rect"></div>
-    </div>
-
-
 </section>
+<main class="main_section">
+
+    <section class="profile_section">
+        <div class="profile_card">
+            <div class="profile_photo">
+                <img src="../images/profike_img.png" alt="Profile photo">
+            </div>
+            <div class="profile_info">
+                <h2 class="nickname" id="nickName">oct00pus</h2>
+                <p class="description" id="bioInfo">
+                    I am a programmer with experience in Python, Java, and C. I enjoy learning new technologies, solving coding challenges, and building small projects to improve my skills.
+                </p>
+                <div class="profile_meta">
+                    <span><b>Name:</b> Yevhenii</span>
+                    <span><b>Level:</b> 99 (Master)</span>
+                    <span><b>Registration date:</b> 12.11.2025</span>
+                    <span><b>Last seen:</b> 12.11.2025</span>
+                    <span><b>Commented:</b> 50 times</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs_container">
+            <button class="tab active" data-tab="stats">Statistics</button>
+            <button class="tab" data-tab="saved">Saved Tasks</button>
+            <button class="tab" data-tab="advices">Learning Tips</button>
+            <button class="tab" data-tab="settings">Settings</button>
+        </div>
+    </section>
+
+    <section class="progress_section">
+        <div class="info_rect">
+            <div class="tab_content active" id="stats">
+                <div class="stats_grid">
+                    <div class="stat_card">
+                        <span class="stat_value">154</span>
+                        <span class="stat_label">Tasks Solved</span>
+                    </div>
+                    <div class="stat_card">
+                        <span class="stat_value">87%</span>
+                        <span class="stat_label">Success Rate</span>
+                    </div>
+                    <div class="stat_card">
+                        <span class="stat_value">12</span>
+                        <span class="stat_label">Current Streak</span>
+                    </div>
+                    <div class="stat_card">
+                        <span class="stat_value">34</span>
+                        <span class="stat_label">Best Streak</span>
+                    </div>
+                </div>
+
+                <h2 style="margin-bottom: 30px">Languages Progress 📈</h2>
+                <div class="language_card">
+                    <div class="language_header">
+                        <div class="stat_value">92%</div>
+                        <div class="stat_label">Python</div>
+                    </div>
+                    <div class="language_text">
+                        <p>
+                            Strong understanding of core Python concepts, data structures, and problem-solving patterns. Confident with algorithms and small projects.
+                        </p>
+                        <span class="recommendation">
+            Recommended: focus on async programming and system design.
+        </span>
+                    </div>
+                </div>
+                <div class="language_card">
+                    <div class="language_header">
+                        <div class="stat_value">86%</div>
+                        <div class="stat_label">Java</div>
+                    </div>
+                    <div class="language_text">
+                        <p>
+                            Solid OOP knowledge, interfaces, inheritance, and basic design patterns. Experience with university-level projects.
+                        </p>
+                        <span class="recommendation">
+            Recommended: collections deep dive and multithreading basics.
+        </span>
+                    </div>
+                </div>
+                <div class="language_card">
+                    <div class="language_header">
+                        <div class="stat_value">58%</div>
+                        <div class="stat_label">C</div>
+                    </div>
+                    <div class="language_text">
+                        <p>
+                            Basic understanding of memory management, pointers, and procedural logic. Still building confidence with low-level concepts.
+                        </p>
+                        <span class="recommendation">
+            Recommended: pointer arithmetic and memory debugging practice.
+        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_content" id="saved">
+                <h2>Saved Tasks 📌</h2>
+                <p>You haven’t saved any tasks yet.</p>
+                <p>Save tasks you want to solve later or repeat to improve your skills.</p>
+            </div>
+
+            <div class="tab_content" id="advices">
+                <h2 class="tips_title" style="margin-bottom: 30px; margin-top: -5px">Study Tips💡</h2>
+                <div class="tips_grid">
+                    <div class="tip_card">
+                        <span class="tip_icon">📚</span>
+                        <p>Review previously solved tasks to strengthen your knowledge.</p>
+                    </div>
+                    <div class="tip_card">
+                        <span class="tip_icon">🧩</span>
+                        <p>Break complex problems into smaller steps.</p>
+                    </div>
+                    <div class="tip_card">
+                        <span class="tip_icon">⏳</span>
+                        <p>Study consistently instead of cramming.</p>
+                    </div>
+                    <div class="tip_card">
+                        <span class="tip_icon">💬</span>
+                        <p>Ask questions and discuss solutions with others.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_content" id="settings">
+                <h2>Settings ⚙️</h2>
+                <form class="settings_form" id="settingsForm">
+                    <div class="form_group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Bio" required></textarea>
+                    </div>
+                    <button class="button" type="submit">Save changes</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+</main>
+<script src="../js/profile.js"></script>
 </body>
 </html>
