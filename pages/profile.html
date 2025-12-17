@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="/css/profile.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../css/profile.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <section class="img_section">
@@ -35,11 +35,11 @@
                     I am a programmer with experience in Python, Java, and C. I enjoy learning new technologies, solving coding challenges, and building small projects to improve my skills.
                 </p>
                 <div class="profile_meta">
-                    <span><b>Name:</b> Yevhenii</span>
-                    <span><b>Level:</b> 99 (Master)</span>
-                    <span><b>Registration date:</b> 12.11.2025</span>
-                    <span><b>Last seen:</b> 12.11.2025</span>
-                    <span><b>Commented:</b> 50 times</span>
+                    <span><b style="color: #00aaff">Name:</b> Yevhenii</span>
+                    <span><b style="color: #00aaff">Level:</b> 99 (Master)</span>
+                    <span><b style="color: #00aaff">Registration date:</b> 12.11.2025</span>
+                    <span><b style="color: #00aaff">Last seen:</b> 12.11.2025</span>
+                    <span><b style="color: #00aaff">Commented:</b> 50 times</span>
                 </div>
             </div>
         </div>
@@ -120,8 +120,8 @@
             </div>
             <div class="tab_content" id="saved">
                 <h2>Saved Tasks 📌</h2>
-                <p>You haven’t saved any tasks yet.</p>
-                <p>Save tasks you want to solve later or repeat to improve your skills.</p>
+                <p style="margin-top: 20px; font-size: 18px">You haven’t saved any tasks yet.</p>
+                <p style=" font-size: 18px">Save tasks you want to solve later or repeat to improve your skills.</p>
             </div>
 
             <div class="tab_content" id="advices">
@@ -129,19 +129,19 @@
                 <div class="tips_grid">
                     <div class="tip_card">
                         <span class="tip_icon">📚</span>
-                        <p>Review previously solved tasks to strengthen your knowledge.</p>
+                        <p style=" font-size: 18px">Review previously solved tasks to strengthen your knowledge.</p>
                     </div>
                     <div class="tip_card">
                         <span class="tip_icon">🧩</span>
-                        <p>Break complex problems into smaller steps.</p>
+                        <p style=" font-size: 18px">Break complex problems into smaller steps.</p>
                     </div>
                     <div class="tip_card">
                         <span class="tip_icon">⏳</span>
-                        <p>Study consistently instead of cramming.</p>
+                        <p style=" font-size: 18px">Study consistently instead of cramming.</p>
                     </div>
                     <div class="tip_card">
                         <span class="tip_icon">💬</span>
-                        <p>Ask questions and discuss solutions with others.</p>
+                        <p style=" font-size: 18px">Ask questions and discuss solutions with others.</p>
                     </div>
                 </div>
             </div>
@@ -149,11 +149,11 @@
                 <h2>Settings ⚙️</h2>
                 <form class="settings_form" id="settingsForm">
                     <div class="form_group">
-                        <label for="username">Username</label>
+                        <label for="username" style=" font-size: 18px">Username</label>
                         <input type="text" id="username" name="username" placeholder="Username" required>
                     </div>
                     <div class="form_group">
-                        <label for="bio">Bio</label>
+                        <label for="bio" style=" font-size: 18px">Bio</label>
                         <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Bio" required></textarea>
                     </div>
                     <button class="button" type="submit">Save changes</button>

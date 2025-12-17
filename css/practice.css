@@ -1,22 +1,19 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
+    font-family: "Rubik", sans-serif;
     color: #ffffff;
-    background-color: rgb(30, 30, 30);
+    background-image: url('/images/bg2(1).jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     scroll-behavior: smooth;
 }
 
-
-/* Верхній прямокутник */
-/* Зберігаємо rectangle fixed */
 .rectangle {
     width: 100%;
     height: 80px;
-    background: linear-gradient(90deg, #3e3a3a, #2f2b2b);
+    background: #191919;
     position: fixed;
     top: 0;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
@@ -96,24 +93,26 @@ html, body {
 }
 
 .task_rect{
-    margin-top: 100px;
+    margin-top: 90px;
     border-radius: 15px;
-    border: 8px solid #3e3939;
+    border: 4px solid #3e3939;
     padding: 25px;
-    width: 800px;
-    height: 350px;
+    width: 1200px;
+    height: 450px;
     color: white;
-    background: #5D5656;
+    background: #191919;
 }
 
 .comm_rect{
-    margin-top: 70px;
+    margin-top: 75px;
     border-radius: 15px;
     padding: 25px;
-    width: 1000px;
+    width: 900px;
     height: auto;
     color: white;
-    background: #5D5656;
+    background: #191919;
+    border: 4px solid #3e3939;
+
 }
 
 .comm_rect h2{
@@ -206,10 +205,11 @@ html, body {
 
 /* BUTTON */
 .comment_input button {
+    width: 120px;
     height: 50px;
     padding: 0 26px;
 
-    background: linear-gradient(135deg, #00aaff, #0077cc);
+    background: linear-gradient(135deg, #257cd5, #1e5791);
     border: 3px solid #3e3939;
     border-radius: 14px;
 
@@ -232,10 +232,14 @@ html, body {
             0 6px 16px rgba(0,170,255,0.25);
 }
 
+
 .task_info {
-    width: 375px;
+    margin-left: 30px;
+    margin-top: 15px;
+    text-align: center;
+    width: 700px;
     height: auto;
-    background: #d9d9d9; /* світлий фон */
+    background: #282828; /* світлий фон */
     border-radius: 15px;
     border: 3px solid #3e3939;
     padding: 16px;
@@ -243,16 +247,16 @@ html, body {
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05), 0 6px 12px rgba(0,0,0,0.35);
 }
 
+
 .task_info a {
     display: block;
     white-space: pre-line; /* перенос рядків */
-    color: #2b2b2b; /* темний текст */
-    font-size: 14px;
+    color: #ffffff; /* темний текст */
+    font-size: 20px;
     line-height: 1.6;
     text-align: left;
     overflow-wrap: break-word; /* слова не виходять за блок */
 }
-
 
 
 .lang_tab{
@@ -265,8 +269,8 @@ html, body {
 }
 
 .little_button{
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 50px;
     background: #fed16a;
     border-radius: 10px;
     border: 3px solid #3e3939;
@@ -274,7 +278,7 @@ html, body {
 
 .lang_tabs_wrapper a{
     font-size: 20px;
-    margin-top: 12.5px;
+    margin-top: 30px;
     color: #000000;
     font-weight: bold;
     display: flex;
@@ -290,9 +294,9 @@ html, body {
 }
 
 .little_button2{
-    width: 100px;
-    height: 30px;
-    background: #84994f;
+    width: 120px;
+    height: 50px;
+    background: #bbff07;
     border-radius: 10px;
     border: 3px solid #3e3939;
 }
@@ -305,8 +309,8 @@ html, body {
 }
 
 .left_side {
-    margin-top: 40px;
-    margin-left: 40px;
+    margin-top: 80px;
+    margin-left: 80px;
     display: flex;
     flex-direction: column;
     align-items: center; /* всі елементи по центру лівої сторони */
@@ -333,15 +337,13 @@ html, body {
     text-decoration: none;
 }
 
-/* Train — зелено-блакитна, активна */
 .little_button2 {
-    background: linear-gradient(135deg, #00cfff, #0088dd);
+    background: linear-gradient(135deg, #257cd5, #1e5791);
     color: #fff;
 }
 
 .little_button2:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 204, 255, 0.6);
 }
 
 /* Skip — світло-жовта для контрасту */
@@ -352,7 +354,6 @@ html, body {
 
 .little_button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(254, 209, 106, 0.6);
 }
 
 /* Натискання */
@@ -378,8 +379,8 @@ html, body {
 
 .lang_dropdown {
     position: absolute;
-    top: 0;
-    left: 205px;
+    top: -200px;
+    left: -175px;
     margin-left: 200px;
     margin-top: 210px;
     font-size: 20px;
@@ -397,7 +398,7 @@ html, body {
 }
 
 .stat_card {
-    background: #2A2A2AFF; /* трохи світліше за фон */
+    background: #232323; /* трохи світліше за фон */
     border-radius: 16px;
     padding: 20px;
     text-align: center;
@@ -405,17 +406,19 @@ html, body {
     transition: 0.3s ease;
     margin-bottom: 5px;
     width: 200px;
+    position: relative;
+    border: 2px solid #3e3939;
 }
 
 .stat_value {
-    font-size: 25px; /* трохи більші цифри */
+    font-size: 28px; /* трохи більші цифри */
     font-weight: 700;
-    color: #00cfff; /* більш яскравий блакитний для контрасту */
+    color: #008ed3; /* більш яскравий блакитний для контрасту */
 }
 
 .stat_label {
-    font-size: 14px;
-    color: #e0e0e0; /* світліший для кращої видимості */
+    font-size: 16px;
+    color: #ffffff; /* світліший для кращої видимості */
     opacity: 0.9;
 }
 
@@ -448,7 +451,7 @@ html, body {
 }
 
 .lang_item:hover {
-    background: #00aaff;
+    background: #1f60a1;
     color: #000;
 }
 

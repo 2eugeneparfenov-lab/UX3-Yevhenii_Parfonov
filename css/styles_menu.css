@@ -100,21 +100,26 @@ html, body {
 .menu_rect {
     width: 200px;
     height: 400px;
-    background-color: #d9d9d9;
-    color: #2f2b2b;
+
+    background-image: url("/images/bg7.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
     margin-top: 30px;
     border-radius: 30px;
     border: 4px #3e3a3a solid;
 
-    display: flex;              /* додаємо flex */
-    flex-direction: column;     /* елементи по вертикалі */
-    justify-content: center;    /* вертикальне вирівнювання */
-    align-items: center;        /* горизонтальне вирівнювання */
-    text-align: center;         /* вирівнювання тексту */
-    gap: 20px;                  /* відстань між заголовком та іконкою */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
     box-sizing: border-box;
 }
+
 
 
 .wrapper{
@@ -142,4 +147,21 @@ html, body {
     align-items: center;     /* вертикальне вирівнювання */
     width: 100px;            /* розмір контейнера */
     height: 100px;
+}
+
+.menu_rect::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    border-radius: 30px;
+}
+
+.menu_rect {
+    position: relative;
+}
+
+.menu_rect > * {
+    position: relative;
+    z-index: 1;
 }
