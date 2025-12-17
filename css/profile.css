@@ -66,7 +66,7 @@ body {
 .upper_text a:hover,
 .upper_text_left a:hover {
     transform: translateY(-2px);
-    text-shadow: 0 2px 5px rgba(0, 170, 255, 0.5);
+    text-shadow: 0 2px 5px rgba(0, 170, 255, 0.56);
 }
 
 /* Анімоване підкреслення */

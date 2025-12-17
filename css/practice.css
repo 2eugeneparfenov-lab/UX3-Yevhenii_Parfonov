@@ -88,3 +88,373 @@ html, body {
 .upper_text_left a:hover::after {
     width: 100%;
 }
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task_rect{
+    margin-top: 100px;
+    border-radius: 15px;
+    border: 8px solid #3e3939;
+    padding: 25px;
+    width: 800px;
+    height: 350px;
+    color: white;
+    background: #5D5656;
+}
+
+.comm_rect{
+    margin-top: 70px;
+    border-radius: 15px;
+    padding: 25px;
+    width: 1000px;
+    height: auto;
+    color: white;
+    background: #5D5656;
+}
+
+.comm_rect h2{
+    margin-left: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.row h2 {
+    margin-right: 40px;
+}
+.comments{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.tab {
+    text-decoration: none;
+    position: relative;
+    padding: 0 18px;           /* ОДНАКОВІ відступи з обох сторін */
+    cursor: pointer;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* vertical divider */
+.tab:not(:last-child)::after {
+
+    content: "";
+    position: absolute;
+    right: 0;                  /* divider завжди справа */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 22px;
+    background: #fff;
+}
+
+.tab:hover {
+    color: #00aaff;
+}
+
+/* COMMENT INPUT WRAPPER */
+.comment_input {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* INPUT — новий дизайн */
+.comment_input input {
+    flex: 1;
+    height: 50px;
+    padding: 0 16px;
+
+    background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+
+    font-size: 14px;
+    color: #ffffff;
+
+    box-shadow:
+            inset 0 0 0 1px rgba(255,255,255,0.03),
+            0 6px 16px rgba(0,0,0,0.35);
+
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.comment_input input::placeholder {
+    color: #9a9a9a;
+    font-weight: 400;
+}
+
+/* FOCUS — головна магія */
+.comment_input input:focus {
+    border-color: #00aaff;
+    background: linear-gradient(145deg, #2e2e2e, #222222);
+
+    box-shadow:
+            inset 0 0 0 1px rgba(0,170,255,0.35),
+            0 0 0 4px rgba(0,170,255,0.15),
+            0 10px 30px rgba(0,0,0,0.45);
+}
+
+/* BUTTON */
+.comment_input button {
+    height: 50px;
+    padding: 0 26px;
+
+    background: linear-gradient(135deg, #00aaff, #0077cc);
+    border: 3px solid #3e3939;
+    border-radius: 14px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.comment_input button:hover {
+    transform: translateY(-2px);
+
+}
+
+.comment_input button:active {
+    transform: translateY(0);
+    box-shadow:
+            0 6px 16px rgba(0,170,255,0.25);
+}
+
+.task_info {
+    width: 375px;
+    height: auto;
+    background: #d9d9d9; /* світлий фон */
+    border-radius: 15px;
+    border: 3px solid #3e3939;
+    padding: 16px;
+    overflow-y: auto; /* вертикальна прокрутка, якщо текст не вміщується */
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05), 0 6px 12px rgba(0,0,0,0.35);
+}
+
+.task_info a {
+    display: block;
+    white-space: pre-line; /* перенос рядків */
+    color: #2b2b2b; /* темний текст */
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+    overflow-wrap: break-word; /* слова не виходять за блок */
+}
+
+
+
+.lang_tab{
+    width: 250px;
+    height: 50px;
+    background: #0088DDFF;
+    gap: 40px;
+    border-radius: 15px;
+    border: 3px solid #3e3939;
+}
+
+.little_button{
+    width: 100px;
+    height: 30px;
+    background: #fed16a;
+    border-radius: 10px;
+    border: 3px solid #3e3939;
+}
+
+.lang_tabs_wrapper a{
+    font-size: 20px;
+    margin-top: 12.5px;
+    color: #000000;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.little_buttons_wrapper a{
+    margin-top: 5px;
+    color: #000000;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.little_button2{
+    width: 100px;
+    height: 30px;
+    background: #84994f;
+    border-radius: 10px;
+    border: 3px solid #3e3939;
+}
+
+.task_rect {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.left_side {
+    margin-top: 40px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* всі елементи по центру лівої сторони */
+    gap: 20px; /* відстань між синіми блоками та жовтими кнопками */
+}
+
+.little_buttons_wrapper {
+    display: flex;
+    gap: 12px;
+}
+
+.little_button, .little_button2 {
+    width: 110px;
+    height: 40px;
+    border-radius: 12px;
+    border: 2px solid #3e3939;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+/* Train — зелено-блакитна, активна */
+.little_button2 {
+    background: linear-gradient(135deg, #00cfff, #0088dd);
+    color: #fff;
+}
+
+.little_button2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 204, 255, 0.6);
+}
+
+/* Skip — світло-жовта для контрасту */
+.little_button {
+    background: linear-gradient(135deg, #fed16a, #fcbf49);
+    color: #000;
+}
+
+.little_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(254, 209, 106, 0.6);
+}
+
+/* Натискання */
+.little_button:active, .little_button2:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Посилання всередині кнопок */
+.little_button a, .little_button2 a {
+    margin-top: -2.5px;
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    pointer-events: none; /* щоб клік ловився на батьку */
+}
+
+
+.right_side {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lang_dropdown {
+    position: absolute;
+    top: 0;
+    left: 205px;
+    margin-left: 200px;
+    margin-top: 210px;
+    font-size: 20px;
+    color: #000000;
+
+    width: 255px;
+    height: 175px;
+    background: #0088dd;
+    border-radius: 14px;
+    padding: 10px 0;
+    border: 3px solid #3e3939;
+
+    display: none;
+    flex-direction: column;
+}
+
+.stat_card {
+    background: #2A2A2AFF; /* трохи світліше за фон */
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 0 8px 20px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+    margin-bottom: 5px;
+    width: 200px;
+}
+
+.stat_value {
+    font-size: 25px; /* трохи більші цифри */
+    font-weight: 700;
+    color: #00cfff; /* більш яскравий блакитний для контрасту */
+}
+
+.stat_label {
+    font-size: 14px;
+    color: #e0e0e0; /* світліший для кращої видимості */
+    opacity: 0.9;
+}
+
+.lang_dropdown {
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 225px;
+
+    width: 200px;
+    background: #2a2a2a;
+    border-radius: 14px;
+    border: 2px solid #3e3939;
+    height: auto;
+
+    display: none;
+    flex-direction: column;
+    padding: 8px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+    animation: fadeIn 0.2s ease;
+}
+
+.lang_item {
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.lang_item:hover {
+    background: #00aaff;
+    color: #000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+

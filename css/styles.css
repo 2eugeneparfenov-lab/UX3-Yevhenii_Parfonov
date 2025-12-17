@@ -20,7 +20,7 @@ html, body {
 .about_us {
     background-color: #1e1e1e; /* колір фону після скролу */
     color: #ffffff;
-    min-height: 85vh;
+    max-height: 86vh;
     padding: 50px;
 }
 
@@ -46,7 +46,7 @@ html, body {
 .about_text_columns {
     display: flex;
     gap: 40px;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .about_text_columns p {
@@ -62,7 +62,7 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin-top: 100px;
+    margin-top: 140px;
 }
 
 /* user stories */
@@ -89,13 +89,19 @@ html, body {
     font-size: 16px;
 }
 
+.user_story_image {
+    width: auto;
+    height: 80px;
+    border-radius: 50%;
+}
+
 /* divider */
 
 .divider {
     height: 2px;
     background: #ffffff;
     opacity: 0.7;
-    margin-top: 230px;
+    margin-top: 30px;
 }
 
 /* contact */
