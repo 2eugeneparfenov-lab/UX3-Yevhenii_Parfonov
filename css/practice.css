@@ -235,10 +235,10 @@ html, body {
 
 .task_info {
     margin-left: 30px;
-    margin-top: 15px;
+    margin-top: 5px;
     text-align: center;
     width: 700px;
-    height: auto;
+    height: 280px;
     background: #282828; /* світлий фон */
     border-radius: 15px;
     border: 3px solid #3e3939;
@@ -299,6 +299,7 @@ html, body {
     background: #bbff07;
     border-radius: 10px;
     border: 3px solid #3e3939;
+    margin-top: -20px;
 }
 
 .task_rect {
@@ -326,6 +327,8 @@ html, body {
     width: 110px;
     height: 40px;
     border-radius: 12px;
+    margin-top: -20px;
+
     border: 2px solid #3e3939;
     font-weight: 600;
     font-size: 14px;
@@ -374,7 +377,14 @@ html, body {
 
 .right_side {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column; /* ВАЖЛИВО */
+    align-items: center;     /* по центру */
+    width: 100%;
+}
+
+.right_side h1 {
+    margin-bottom: 25px;
+    white-space: nowrap; /* щоб 👉🧩 не переносились */
 }
 
 .lang_dropdown {
@@ -404,7 +414,7 @@ html, body {
     text-align: center;
     box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 0 8px 20px rgba(0,0,0,0.4);
     transition: 0.3s ease;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
     width: 200px;
     position: relative;
     border: 2px solid #3e3939;
@@ -461,3 +471,139 @@ html, body {
 }
 
 
+/* ================================ */
+/* JOIN OUR TEAM MODAL – modal4     */
+/* ================================ */
+
+#modal4 {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Головний контейнер */
+.modal-content4 {
+    width: 850px;
+    max-width: 95%;
+    height: 420px;
+    background: #191919;
+    border-radius: 24px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+    animation: popup 0.35s ease-out;
+}
+
+/* ---------- LEFT SIDE ---------- */
+
+.modal4-left {
+    width: 55%;
+    padding: 50px;
+    background: linear-gradient(180deg, #0f2c44, #191919);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal4-left h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #00aaff;
+    margin-bottom: 20px;
+}
+
+.modal4-left h3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* ---------- RIGHT SIDE ---------- */
+
+.modal4-right {
+    width: 45%;
+    padding: 50px;
+    background: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Apply button */
+.apply-btn {
+    background: linear-gradient(135deg, #257cd5, #1e5791);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 16px;
+    transition: all 0.25s ease;
+}
+
+.apply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,170,255,0.35);
+}
+
+/* Close button */
+.close4 {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 28px;
+    color: #aaaaaa;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.close4:hover {
+    color: #00aaff;
+}
+
+/* ---------- ANIMATION ---------- */
+
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+    .modal-content4 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .modal4-left,
+    .modal4-right {
+        width: 100%;
+        padding: 35px;
+        text-align: center;
+    }
+
+    .modal4-left h1 {
+        font-size: 32px;
+    }
+}
+
+
+#modal4.show {
+    display: flex;
+}

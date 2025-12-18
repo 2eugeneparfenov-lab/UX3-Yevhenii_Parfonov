@@ -16,7 +16,7 @@ html, body {
 .rectangle {
     width: 100%;
     height: 80px;
-    background: linear-gradient(90deg, #3e3a3a, #2f2b2b);
+    background: #191919;
     position: fixed;
     top: 0;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
@@ -164,4 +164,141 @@ html, body {
 .menu_rect > * {
     position: relative;
     z-index: 1;
+}
+
+/* ================================ */
+/* JOIN OUR TEAM MODAL – modal4     */
+/* ================================ */
+
+#modal4 {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Головний контейнер */
+.modal-content4 {
+    width: 850px;
+    max-width: 95%;
+    height: 420px;
+    background: #191919;
+    border-radius: 24px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+    animation: popup 0.35s ease-out;
+}
+
+/* ---------- LEFT SIDE ---------- */
+
+.modal4-left {
+    width: 55%;
+    padding: 50px;
+    background: linear-gradient(180deg, #0f2c44, #191919);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal4-left h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #00aaff;
+    margin-bottom: 20px;
+}
+
+.modal4-left h3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* ---------- RIGHT SIDE ---------- */
+
+.modal4-right {
+    width: 45%;
+    padding: 50px;
+    background: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Apply button */
+.apply-btn {
+    background: linear-gradient(135deg, #257cd5, #1e5791);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 16px;
+    transition: all 0.25s ease;
+}
+
+.apply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,170,255,0.35);
+}
+
+/* Close button */
+.close4 {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 28px;
+    color: #aaaaaa;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.close4:hover {
+    color: #00aaff;
+}
+
+/* ---------- ANIMATION ---------- */
+
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+    .modal-content4 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .modal4-left,
+    .modal4-right {
+        width: 100%;
+        padding: 35px;
+        text-align: center;
+    }
+
+    .modal4-left h1 {
+        font-size: 32px;
+    }
+}
+
+
+#modal4.show {
+    display: flex;
 }

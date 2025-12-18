@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>AI chat</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="../css/styles_menu.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="../css/chat_bot.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <section class="img_section">
@@ -22,5 +22,46 @@
     </div>
   </div>
 </section>
+<main class="chat_wrapper">
+  <div class="chat_container">
+
+    <div class="chat_header">
+      <span class="chat_title">AI Assistant 🤖</span>
+      <span class="chat_subtitle">Ask questions, get explanations, learn faster</span>
+    </div>
+
+    <div class="chat_messages">
+      <div class="message ai">
+        <div class="bubble">
+          Hi! 👋 I’m your AI assistant.
+          Ask me anything about programming, tasks, or concepts.
+        </div>
+      </div>
+
+      <div class="message user">
+        <div class="bubble">
+          Explain what pointers are in C.
+        </div>
+      </div>
+
+      <div class="message ai">
+        <div class="bubble">
+          <p>A pointer is a variable that stores the memory address of another variable.</p>
+          <p>Instead of holding a direct value like an <code>int</code> or <code>char</code>, a pointer holds the location in memory where that value is stored.</p>
+          <p>In C, pointers are declared using the <code>*</code> symbol. For example, <code>int *p;</code> means that <code>p</code> is a pointer to an integer. To assign a pointer, you usually use the address-of operator <code>&</code>, which gives the memory address of a variable. For instance, if you have <code>int x = 10;</code>, then <code>p = &x;</code> makes <code>p</code> point to <code>x</code>.</p>
+          <p>To access or modify the value stored at the memory address a pointer points to, you use dereferencing, also done with <code>*</code>. Writing <code>*p</code> gives you the value of <code>x</code>, and changing <code>*p = 20;</code> will update <code>x</code> itself.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="chat_input">
+      <input type="text" placeholder="Type your message..." />
+      <button>Send</button>
+    </div>
+
+  </div>
+</main>
+
 </body>
 </html>

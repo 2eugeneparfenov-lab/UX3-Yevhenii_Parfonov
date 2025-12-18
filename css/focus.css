@@ -258,7 +258,7 @@ html, body {
 .task_info {
     margin-bottom: 20px;
     margin-left: 30px;
-    margin-top: 60px;
+    margin-top: -20px;
     text-align: center;
     width: 700px;
     height: auto;

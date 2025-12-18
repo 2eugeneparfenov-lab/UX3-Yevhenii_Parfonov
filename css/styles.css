@@ -18,7 +18,7 @@ html, body {
 }
 
 .about_us {
-    background-color: #1e1e1e; /* колір фону після скролу */
+    background-color: rgb(30, 30, 30);
     color: #ffffff;
     max-height: 86vh;
     padding: 50px;
@@ -119,14 +119,10 @@ html, body {
     opacity: 0.9;
 }
 
-
-
-/* Верхній прямокутник */
-/* Зберігаємо rectangle fixed */
 .rectangle {
     width: 100%;
     height: 80px;
-    background: linear-gradient(90deg, #3e3a3a, #2f2b2b);
+    background: #191919;
     position: fixed;
     top: 0;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
@@ -348,7 +344,7 @@ html, body {
 /* LEFT SIDE */
 .modal4-left {
     flex: 1.2;
-    background: #234f9b;
+    background: #191919;
     color: #ffffff;
     padding: 50px;
     display: flex;
@@ -372,7 +368,7 @@ html, body {
 /* RIGHT SIDE */
 .modal4-right {
     flex: 0.8;
-    background: #f5f7fb;
+    background: #9a9a9a;
     position: relative;
     display: flex;
     justify-content: center;
@@ -387,15 +383,15 @@ html, body {
     border-radius: 30px;
     border: none;
     cursor: pointer;
-    background: #234f9b;
+    background: #191919;
     color: #ffffff;
     transition: 0.25s ease;
 }
 
 .apply-btn:hover {
-    background: #1b3f7c;
+    background: #353535;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(35,79,155,0.35);
+    box-shadow: 0 8px 20px rgba(37, 37, 37, 0.35);
 }
 
 /* CLOSE */
@@ -574,3 +570,4 @@ html, body {
 
 .forgot-password a { color: #1a3a7a; /* жовтий */ text-decoration: none; font-size: 1em; font-weight: 600; transition: 0.2s; }
 .forgot-password a:hover { color: #1a3a7a; text-decoration: underline; }
+
