@@ -2,9 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>BrainForge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/task_fo.css">
 </head>
 <body>
+<div id="top"></div>
+<section class="img_section" id="img_section">
+    <div class="rectangle">
+        <div class="upper_text">
+            <a href="menu_page.html">Menu</a>
+            <a href="profile.html">Profile</a>
+            <a href="practice.html">Practice Tasks</a>
+            <a href="focus.html" style="color: #00aaff">Focus Tasks</a>
+            <a href="chat_bot.html">AI assistant</a>
+        </div>
+        <div class="upper_text_left">
+            <a href="#">Join our team</a>
+            <a href="../index.html">Log out</a>
+        </div>
+    </div>
+</section>
+
+<section class="task-page">
+
+    <!-- LEFT SIDE -->
+    <div class="task-card">
+
+        <!-- SUCCESS INDICATOR -->
+        <div class="ready-rect">
+            <h2>Task completed successfully ✓</h2>
+        </div>
+
+        <h2>Focus - Python - Arrays - Task 1</h2>
+
+        <div class="task-description">
+            <p>
+                In this task, your job is to find the error in the code provided.
+                Read the program, identify the line that causes incorrect behavior,
+                and try to fix it.
+            </p>
+            <p>
+                This task serves to practice logical thinking and the ability to work with error states in programming.
+            </p>
+        </div>
+
+        <div class="output-box">
+            <h3 style="margin-top: -5px">Output</h3>
+            <div class="output-content" id="output">
+                &gt;&gt; Error
+            </div>
+        </div>
+
+        <div class="task-buttons">
+            <a href="#img_section">
+                <button class="btn green attempt-btn">Attempt</button>
+            </a>
+            <button class="btn yellow" onclick="window.location.href='chat_bot.html'">Ask for help</button>
+            <button class="btn red" onclick="window.location.href='practice.html'">Leave</button>
+        </div>
+
+        <div class="task-buttons">
+            <button class="btn green" onclick="window.location.href='profile.html'">Save task</button>
+            <button class="btn yellow" onclick="window.location.href='menu_page.html'">Main menu</button>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="solution-area">
+        <div class="solution-box">
+            <h3>Solution</h3>
+            <textarea spellcheck="false">
+raw_input_data = input("Enter numbers separated by spaces:")
+parts = raw_input_data.strip().split(" ")
+
+clean_parts = []
+for p in parts:
+    if p != "":
+        clean_parts.append(p)
+
+numbers_list = []
+for item in clean_parts:
+    try:
+        value = int(item)
+        numbers_list.append(value)
+    except ValueError:
+        print(f"Warning: {item} is not a valid integer and will be ignored.")
+
+even_numbers = []
+for num in numbers_list:
+    if num % 2 == 0:
+        even_numbers.append(num)
+
+print(f"Total numbers entered: {len(numbers_list)}")
+print(f"Even numbers detected: {even_numbers}")
+
+if len(even_numbers) > 0:
+    total_sum = 0
+    for x in even_numbers:
+        total_sum += x
+    average_value = total_sum / len(even_numbers)
+    print(f"Result: {average_value:.2f}")
+else:
+    print("No even elements found.")
+            </textarea>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const attemptBtn = document.querySelector('.attempt-btn');
+        const readyRect = document.querySelector('.ready-rect');
+        const output = document.getElementById('output');
+
+        attemptBtn.addEventListener('click', () => {
+            readyRect.style.display = 'flex';
+            output.textContent = '>> Average of even numbers: 5.33';
+            output.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+    });
+</script>
 
 </body>
 </html>

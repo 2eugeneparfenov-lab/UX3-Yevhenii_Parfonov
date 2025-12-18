@@ -1,0 +1,256 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    body {
+        font-family: "Rubik", sans-serif;
+    }
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    scroll-behavior: smooth;
+    background-image: url('/images/bg2(1).jpg');
+}
+
+
+/* Верхній прямокутник */
+/* Зберігаємо rectangle fixed */
+.rectangle {
+    width: 100%;
+    height: 80px;
+    background: #191919;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99;
+}
+
+/* Додаємо відступ для основного контенту */
+.img_section, .about_us, .main_text {
+    padding-top: 40px; /* рівно висоті rectangle */
+}
+
+
+/* Блоки навігації */
+.upper_text, .upper_text_left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Лівий блок меню */
+.upper_text {
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+/* Правий блок меню */
+.upper_text_left {
+    justify-content: flex-end;
+    padding-right: 40px;
+    margin-top: -25px;
+}
+
+/* СТИЛІ ДЛЯ ВСІХ ПОСИЛАНЬ МЕНЮ */
+.upper_text a,
+.upper_text_left a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Ховер-ефект підняття та світіння */
+.upper_text a:hover,
+.upper_text_left a:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 2px 5px rgba(0, 170, 255, 0.5);
+}
+
+/* Анімоване підкреслення */
+.upper_text a::after,
+.upper_text_left a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #00aaff;
+    transition: width 0.3s ease;
+}
+
+/* Плавне розширення підкреслення */
+.upper_text a:hover::after,
+.upper_text_left a:hover::after {
+    width: 100%;
+}
+
+
+/* MAIN LAYOUT */
+.task-page {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* LEFT CARD */
+.task-card {
+    margin-top: 20px;
+    width: 40%;
+    background: #191919;
+    color: #d1d1d1;
+    border-radius: 12px;
+    padding: 20px;
+    border: 3px solid #3e3939;
+    position: relative; /* або absolute/fixed */
+    z-index: 1;
+}
+
+.task-card h2 {
+    margin-top: 0;
+    font-size: 20px;
+    position: relative; /* або absolute/fixed */
+    z-index: 1;
+}
+
+.task-description p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.task-description pre {
+    background: #d1d1d1;
+    color: #191919;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
+.task-description ul {
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+/* BUTTONS */
+.task-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 3px solid #3e3939;
+
+}
+
+.btn.green {
+    background: #9bb45a;
+    border: 3px solid #3e3939;
+
+}
+
+.btn.yellow {
+    background: #ffd966;
+    border: 3px solid #3e3939;
+
+}
+
+.btn.red {
+    background: #d9534f;
+    color: #191919;
+    border: 3px solid #3e3939;
+
+}
+
+/* RIGHT SIDE */
+.solution-area {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.solution-box,
+.output-box {
+    margin-top: 20px;
+    background: #191919;
+    border: 3px solid #3e3939;
+
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.solution-box h3,
+.output-box h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.solution-box textarea {
+    width: 96.5%;
+    height: 260px;
+    background: #4b4646;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+}
+
+/* OUTPUT */
+.output-content {
+    height: 140px;
+    background: #4b4646;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/* SUCCESS INDICATOR – same as task_fo */
+.ready-rect {
+    display: none;               /* показується через JS */
+    width: 400px;
+    height: 40px;
+    border-radius: 15px;
+    background: #84994F;
+    color: #191919;
+
+    align-items: center;
+    border: 3px solid #3e3939;
+
+    margin-bottom: 15px;
+}
+
+.ready-rect h2 {
+    margin: 0;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.aaa{
+    display: none;
+}

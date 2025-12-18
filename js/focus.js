@@ -1,7 +1,7 @@
 const goToTask = document.querySelector(".little_button2");
 
 goToTask.addEventListener("click", (e) => {
-    window.location.href='task_pr.html';
+    window.location.href='task_fo.html';
 });
 
 const dropdownCards = document.querySelectorAll('.stat_card.dropdown');

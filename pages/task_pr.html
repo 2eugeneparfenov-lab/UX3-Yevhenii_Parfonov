@@ -2,9 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Task</title>
+    <title>BrainForge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/task_pr.css">
 </head>
 <body>
+<div id="top"></div>
+<section class="img_section">
+    <div class="rectangle">
+        <div class="upper_text">
+            <a href="menu_page.html">Menu</a>
+            <a href="profile.html">Profile</a>
+            <a href="practice.html" style="color: #00aaff">Practice Tasks</a>
+            <a href="focus.html">Focus Tasks</a>
+            <a href="chat_bot.html">AI assistant</a>
+        </div>
+        <div class="upper_text_left">
+            <a href="#">Join our team</a>
+            <a href="../index.html">Log out</a>
+        </div>
+    </div>
+</section>
+<div class="task-page">
 
+    <!-- LEFT: TASK DESCRIPTION -->
+    <div class="task-card">
+        <div class="ready-rect"><h2 style="margin-top: 7px">Task completed successfully ✓</h2></div>
+        <h2>Practice – Python – Arrays – Task 1</h2>
+
+        <div class="task-description">
+            <p>
+                Develop a program in Python that works with an array of integers.
+                The program should read a sequence of numbers from the keyboard,
+                store them in an array, find all even elements, calculate their
+                average value, and display the result on the screen.
+            </p>
+
+            <p>
+                If the array contains no even numbers, the program should display
+                the message <b>"No even elements"</b>.
+            </p>
+
+            <p><b>Example of execution:</b></p>
+            <pre>
+Enter numbers separated by spaces: 4 7 9 2 10 3
+Average of even numbers: 5.33
+            </pre>
+
+            <p><b>This task helps to practice:</b></p>
+            <ul>
+                <li>working with arrays (lists)</li>
+                <li>user input processing</li>
+                <li>conditions and loops</li>
+                <li>basic arithmetic operations</li>
+            </ul>
+        </div>
+
+        <div class="task-buttons">
+            <a href="#top">
+                <button class="btn green attempt-btn">Attempt</button>
+            </a>            <button class="btn yellow" onclick="window.location.href='chat_bot.html'">Ask for help</button>
+            <button class="btn red" onclick="window.location.href='practice.html'">Leave</button>
+        </div>
+
+        <div class="task-buttons">
+            <button class="btn green" onclick="window.location.href='profile.html'">Save task</button>
+            <button class="btn yellow" onclick="window.location.href='menu_page.html'">Main menu</button>
+        </div>
+    </div>
+
+    <!-- RIGHT: SOLUTION + OUTPUT -->
+    <div class="solution-area">
+
+        <div class="solution-box">
+            <h3>Solution</h3>
+            <textarea spellcheck="false">
+numbers = input("Enter numbers separated by spaces: ")
+array = list(map(int, numbers.split()))
+
+even_numbers = [num for num in array if num % 2 == 0]
+
+if even_numbers:
+    average = sum(even_numbers) / len(even_numbers)
+    print(f"Average of even numbers: {average:.2f}")
+else:
+    print("No even elements")
+            </textarea>
+        </div>
+
+        <div class="output-box">
+            <h3>Output</h3>
+            <div class="output-content">
+                <div class="aaa"><a>Enter numbers separated by spaces: 4 7 9 2 10 3<br></br>
+                    Average of even numbers: 5.33</a></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../js/task_pr.js"></script>
 </body>
 </html>
