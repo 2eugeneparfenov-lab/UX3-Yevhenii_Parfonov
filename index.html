@@ -43,7 +43,7 @@
                 <div class="forgot-password">
                     <a href="#" style="margin-left: 150px;">Forgot password?</a>
                 </div>
-                <button class="login-btn" onclick="goMainMenu()">Sign in</button>
+                <button class="login-btn" onclick="goMainMenuJack()">Sign in</button>
                 <button class="create-btn" id="openRegister">Create an account</button>
             </div>
         </div>
@@ -84,6 +84,45 @@
                 <input type="email" placeholder="Code">
                 <button class="login-btn" onclick="goMainMenu()">Create an account</button>
                 <button class="create-btn">Send new code</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h1>WELCOME</h1>
+                <h2>BrainForge</h2>
+                <p>An interactive platform for pupils and students that helps them learn programming in a simple and fun way through practice, tests, and visual tasks.</p>
+            </div>
+            <div class="modal-right">
+                <span class="close" id="closeConfirmMail">&times;</span>
+                <h1>Reset Password</h1>
+                <h2>Confirm your email</h2>
+                <label>Email</label>
+                <input type="email" placeholder="Confirm email">
+                <button class="login-btn" onclick="nextToModal6()">Continue</button>
+                <button class="create-btn">Send new code</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal6">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h1>WELCOME</h1>
+                <h2>BrainForge</h2>
+                <p>An interactive platform for pupils and students that helps them learn programming in a simple and fun way through practice, tests, and visual tasks.</p>
+            </div>
+            <div class="modal-right">
+                <span class="close" id="closeConfirmMailConf">&times;</span>
+                <h1>Reset Password</h1>
+                <h2>Create new password</h2>
+                <label>Password</label>
+                <input type="password" placeholder="Password">
+                <label>Confirm password</label>
+                <input type="password" placeholder="Confirm new password">
+                <button class="login-btn" onclick="goMainMenu()">Reset your password</button>
             </div>
         </div>
     </div>

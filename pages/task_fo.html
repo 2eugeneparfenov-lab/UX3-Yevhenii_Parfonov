@@ -55,7 +55,7 @@
         </div>
 
         <div class="task-buttons">
-            <a href="#img_section">
+            <a href="#top">
                 <button class="btn green attempt-btn">Attempt</button>
             </a>
             <button class="btn yellow" onclick="window.location.href='chat_bot.html'">Ask for help</button>
@@ -121,7 +121,6 @@ else:
         attemptBtn.addEventListener('click', () => {
             readyRect.style.display = 'flex';
             output.textContent = '>> Average of even numbers: 5.33';
-            output.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
 
     });
